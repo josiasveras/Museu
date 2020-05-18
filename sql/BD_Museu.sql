@@ -32,7 +32,7 @@ CREATE TABLE `imagem` (
   `arquivo` varchar(500) NOT NULL,
   `caminho` varchar(500) NOT NULL,
   `tamanho` float NOT NULL,
-  `fecha` bigint(20) NOT NULL
+  `data` datetime default current_timestamp
 );
 
 ALTER TABLE `obra` ADD FOREIGN KEY (`usuario_obra_id`) REFERENCES `usuario` (`id`);
