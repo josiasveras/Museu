@@ -32,8 +32,11 @@
 
             <!-- Início principal -->
             <div id="principal">
-                <br><br><br><br><br><br>
+
+                <!-- Início form-wrapper -->
                 <div class="form-wrapper">
+      
+                    <br><br><br><br><br><br>
                     <h2 style="text-align:center;">Perfil público</h2>
                     <h3 style="text-align:center;">Informações sobre você</h3>
                     <form>
@@ -56,7 +59,9 @@
                       
                       <button type="submit" class="btn btn-primary">Salvar</button>
                     </form>
+                    
                 </div>
+                <!-- Fim form-wrapper -->
 
                 <footer>
                     <p>

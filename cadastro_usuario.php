@@ -33,6 +33,7 @@
             <!-- Início principal -->
             <div id="principal">
                 <br><br><br><br><br><br>
+                <!-- Início form-wrapper -->
                 <div class="form-wrapper">
                     <h2 style="text-align:center;">Criação de perfil público</h2>
                     <form>
@@ -64,6 +65,7 @@
                       <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
                 </div>
+                <!-- Fim form-wrapper -->
 
                 <footer>
                     <p>
