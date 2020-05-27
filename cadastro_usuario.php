@@ -43,21 +43,25 @@
                       </div>
                       <div class="form-group">
                         <label for="email">Endereço de email</label>
-                        <input type="email" class="form-control" id="email" name="email">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Ex: caracter@caracter.dominio">
                       </div>
                       <div class="form-group">
                         <label for="senha">Senha</label>
-                        <input type="password" class="form-control" id="senha">
+                        <input type="password" class="form-control" id="senha" placeholder="8 ou mais caracteres">
                       </div>
                       <div class="form-group">
                         <label for="dtNasc">Data de nascimento</label>
-                        <input type="text" class="form-control" id="dtNasc" name="dtNasc">
+                        <input type="text" class="form-control" id="dtNasc" name="dtNasc" placeholder="Ex: dd/mm/aaaa">
                       </div>
                       <div class="form-group">
                         <label for="genero">Gênero</label>
-                        <input type="text" class="form-control" id="genero" name="genero">
+                        <select class="form-control" id="genero" name="genero">
+                          <option value="masculino">Masculino</option>
+                          <option value="feminino">Feminino</option>
+                        </select>
                       </div>
                       
+                      <br><br>
                       <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
                 </div>
