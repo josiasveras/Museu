@@ -44,7 +44,7 @@
                           <a href="#">
                             <img src="./img/van-gogh.jpg" alt="Lights" style="width:100%">
                             <div class="caption">
-                              <p>Lorem ipsum...</p>
+                              <p>Van Gogh</p>
                             </div>
                           </a>
                         </div>
@@ -54,7 +54,7 @@
                           <a href="#">
                             <img src="./img/van-gogh.jpg" alt="Nature" style="width:100%">
                             <div class="caption">
-                              <p>Lorem ipsum...</p>
+                              <p>Van Gogh</p>
                             </div>
                           </a>
                         </div>
@@ -64,7 +64,7 @@
                           <a href="#">
                             <img src="./img/van-gogh.jpg" alt="Fjords" style="width:100%">
                             <div class="caption">
-                              <p>Lorem ipsum...</p>
+                              <p>Van Gogh</p>
                             </div>
                           </a>
                         </div>
@@ -74,7 +74,7 @@
                           <a href="#">
                             <img src="./img/van-gogh.jpg" alt="Fjords" style="width:100%">
                             <div class="caption">
-                              <p>Lorem ipsum...</p>
+                              <p>Van Gogh</p>
                             </div>
                           </a>
                         </div>
@@ -84,7 +84,7 @@
                           <a href="#">
                             <img src="./img/van-gogh.jpg" alt="Fjords" style="width:100%">
                             <div class="caption">
-                              <p>Lorem ipsum...</p>
+                              <p>Van Gogh</p>
                             </div>
                           </a>
                         </div>
@@ -94,7 +94,7 @@
                           <a href="#">
                             <img src="./img/van-gogh.jpg" alt="Fjords" style="width:100%">
                             <div class="caption">
-                              <p>Lorem ipsum...</p>
+                              <p>Van Gogh</p>
                             </div>
                           </a>
                         </div>
