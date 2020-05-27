@@ -35,7 +35,6 @@
                 <br><br><br><br><br><br>
                 <div class="form-wrapper">
                     <h2 style="text-align:center;">Criação de perfil público</h2>
-                    <h3 style="text-align:center;">Adicione informações sobre você</h3>
                     <form>
                       <div class="form-group">
                         <label for="nome">Nome</label>
