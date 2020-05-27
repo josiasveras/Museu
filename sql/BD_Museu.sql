@@ -8,7 +8,7 @@ CREATE TABLE `usuarios`
   `email` varchar(50) NOT NULL,
   `senha` varchar(32) NOT NULL,
   `dt_nasc` date NOT NULL,
-  `genero` varchar(2) NOT NULL
+  `genero` varchar(9) NOT NULL
 );
 
 INSERT INTO `usuarios`(`nome_usuario`, `email`, `senha`, `dt_nasc`, `genero`) VALUES ('Jorzias Veras','jorzias_veras@museu.com.br',(md5(123)),'1991-01-28','M');
