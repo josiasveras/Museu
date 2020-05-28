@@ -41,7 +41,7 @@
                     <div class="row">
                       <div class="col-md-4">
                         <div class="thumbnail">
-                          <a href="#">
+                          <a href="visualizar_obra_perfil.php">
                             <img src="./img/van-gogh.jpg" alt="Lights" style="width:100%">
                             <div class="caption">
                               <p>Van Gogh</p>
@@ -51,7 +51,7 @@
                       </div>
                       <div class="col-md-4">
                         <div class="thumbnail">
-                          <a href="#">
+                          <a href="visualizar_obra_perfil.php">
                             <img src="./img/van-gogh.jpg" alt="Nature" style="width:100%">
                             <div class="caption">
                               <p>Van Gogh</p>
@@ -61,7 +61,7 @@
                       </div>
                       <div class="col-md-4">
                         <div class="thumbnail">
-                          <a href="#">
+                          <a href="visualizar_obra_perfil.php">
                             <img src="./img/van-gogh.jpg" alt="Fjords" style="width:100%">
                             <div class="caption">
                               <p>Van Gogh</p>
@@ -71,7 +71,7 @@
                       </div>
                       <div class="col-md-4">
                         <div class="thumbnail">
-                          <a href="#">
+                          <a href="visualizar_obra_perfil.php">
                             <img src="./img/van-gogh.jpg" alt="Fjords" style="width:100%">
                             <div class="caption">
                               <p>Van Gogh</p>
@@ -81,7 +81,7 @@
                       </div>
                       <div class="col-md-4">
                         <div class="thumbnail">
-                          <a href="#">
+                          <a href="visualizar_obra_perfil.php">
                             <img src="./img/van-gogh.jpg" alt="Fjords" style="width:100%">
                             <div class="caption">
                               <p>Van Gogh</p>
@@ -91,7 +91,7 @@
                       </div>
                       <div class="col-md-4">
                         <div class="thumbnail">
-                          <a href="#">
+                          <a href="visualizar_obra_perfil.php">
                             <img src="./img/van-gogh.jpg" alt="Fjords" style="width:100%">
                             <div class="caption">
                               <p>Van Gogh</p>
