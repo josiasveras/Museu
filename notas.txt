@@ -14,6 +14,8 @@ NOTAS SOBRE TODO O PROJETO:
 		-HTML5
 		-CSS3
 		-BootStrap
+		-Node JS
+		-live-server-npm
 
 	MATERIAL DE ESTUDO:
 		-Paint App Tutorial | HTML5, Canvas API, JavaScript, ES6 - Ajay Badgujar
