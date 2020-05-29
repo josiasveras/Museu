@@ -1,0 +1,10 @@
+body{
+	margin: 0px;
+	background-color: #283333;  
+}
+
+.toolbox{
+	height: 100vh;
+	position: absolute;
+	background-color: #3a4b4b;
+}
