@@ -1,7 +1,11 @@
 //JAVASCRIPT USANDO O PADRÃO ES6:
 
-import Tool from './tool.class.js';
+import {TOOL_LINE, TOOL_RECTANGLE, TOOL_CIRCLE, TOOL_TRIANGLE, TOOL_PAINT_BUCKET, TOOL_PENCIL, TOOL_BRUSH, TOOL_ERASER} from './tool.js';
+import Paint from './paint.class.js';
 
+var paint = new Paint("canvas");
+paint.activeTool = TOOL_LINE;
+paint.init();
 
 /* Início função EventListener "data-command"
 ---------------------------------------------------------------- */
@@ -27,20 +31,21 @@ document.querySelectorAll("[data-tool]").forEach(
 			item.classList.toggle("active");
 
 			let selectedTool = item.getAttribute("data-tool");
+			paint.activeTool = selectedTool;
 
 			switch (selectedTool) {
-				case Tool.TOOL_LINE:
-				case Tool.TOOL_RECTANGLE:
-				case Tool.TOOL_CIRCLE:
-				case Tool.TOOL_TRIANGLE:
-				case Tool.TOOL_PENCIL:
+				case TOOL_LINE:
+				case TOOL_RECTANGLE:
+				case TOOL_CIRCLE:
+				case TOOL_TRIANGLE:
+				case TOOL_PENCIL:
 					//Tornar visível o conteúdo das classes "group linewidths for-shapes"
 					document.querySelector(".group.for-shapes").style.display = "block";
 					//Tornar invísivel o conteúdo das classes "group linewidths for-brush"
 					document.querySelector(".group.for-brush").style.display = "none";
 					break;
 
-				case Tool.TOOL_BRUSH:
+				case TOOL_BRUSH:
 					//Tornar visível o conteúdo das classes "group linewidths for-brush"
 					document.querySelector(".group.for-brush").style.display = "block";
 					//Tornar invisível o conteúdo das classes "group linewidths for-shapes"
