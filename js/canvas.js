@@ -1,5 +1,7 @@
 //JAVASCRIPT USANDO O PADRÃO ES6:
 
+import Tool from './tool.class.js';
+
 
 /* Início função EventListener "data-command"
 ---------------------------------------------------------------- */
@@ -23,6 +25,33 @@ document.querySelectorAll("[data-tool]").forEach(
 			//Elemento recebe a classe estilizada ".active" no "click"
 			document.querySelector("[data-tool].active").classList.toggle("active");
 			item.classList.toggle("active");
+
+			let selectedTool = item.getAttribute("data-tool");
+
+			switch (selectedTool) {
+				case Tool.TOOL_LINE:
+				case Tool.TOOL_RECTANGLE:
+				case Tool.TOOL_CIRCLE:
+				case Tool.TOOL_TRIANGLE:
+				case Tool.TOOL_PENCIL:
+					//Tornar visível o conteúdo das classes "group linewidths for-shapes"
+					document.querySelector(".group.for-shapes").style.display = "block";
+					//Tornar invísivel o conteúdo das classes "group linewidths for-brush"
+					document.querySelector(".group.for-brush").style.display = "none";
+					break;
+
+				case Tool.TOOL_BRUSH:
+					//Tornar visível o conteúdo das classes "group linewidths for-brush"
+					document.querySelector(".group.for-brush").style.display = "block";
+					//Tornar invisível o conteúdo das classes "group linewidths for-shapes"
+					document.querySelector(".group.for-shapes").style.display = "none";
+					break;
+
+				default:
+					//Tornar invisível ambos os conteúdos das classes "group linewidths for-shapes" e "group linewidths for-brush"
+					document.querySelector(".group.for-shapes").style.display = "none";
+					document.querySelector(".group.for-brush").style.display = "none";
+			}
 
 		});
 	}	
