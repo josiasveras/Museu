@@ -8,6 +8,9 @@
 
         <!-- Estilo customizado canvas -->
         <link rel="stylesheet" type="text/css" href="css/estilo_canvas.css">
+    
+        <!-- JS canvas -->
+        <script src="js/canvas.js" type="module" defer="/script"></script>
 
         <title>Museu SENAC</title>
 
@@ -67,6 +70,23 @@
                 </div>
                 <div class="item" data-line-width="5" title="5 Pixel">
                     <div class="linewidth" style="width: 5px; height: 5px;"></div>
+                </div>                    
+            </div>
+            <div class="group linewidths">
+                <div class="item active" data-brush-width="4" title="4 Pixel">
+                    <div class="linewidth" style="width: 4px; height: 4px;"></div>
+                </div>
+                <div class="item" data-brush-width="6" title="6 Pixel">
+                    <div class="linewidth" style="width: 6px; height: 6px;"></div>
+                </div>
+                <div class="item" data-brush-width="8" title="8 Pixel">
+                    <div class="linewidth" style="width: 8px; height: 8px;"></div>
+                </div>
+                <div class="item" data-brush-width="10" title="10 Pixel">
+                    <div class="linewidth" style="width: 10px; height: 10px;"></div>
+                </div>
+                <div class="item" data-brush-width="12" title="12 Pixel">
+                    <div class="linewidth" style="width: 12px; height: 12px;"></div>
                 </div>                    
             </div>
         </div>
