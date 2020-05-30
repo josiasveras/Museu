@@ -55,7 +55,7 @@
                     <img src="img/eraser-icon.png">
                 </div>
             </div>
-            <div class="group linewidths">
+            <div class="group linewidths for-shapes" style="display: block;">
                 <div class="item active" data-line-width="1" title="1 Pixel">
                     <div class="linewidth" style="width: 1px; height: 1px;"></div>
                 </div>
@@ -72,7 +72,7 @@
                     <div class="linewidth" style="width: 5px; height: 5px;"></div>
                 </div>                    
             </div>
-            <div class="group linewidths">
+            <div class="group linewidths for-brush" style="display: none;">
                 <div class="item active" data-brush-width="4" title="4 Pixel">
                     <div class="linewidth" style="width: 4px; height: 4px;"></div>
                 </div>
