@@ -1,6 +1,6 @@
 body{
 	margin: 0px;
-	background-color: #283333;  
+	background-color: #283333;
 }
 
 .toolbox{
@@ -8,3 +8,32 @@ body{
 	position: absolute;
 	background-color: #3a4b4b;
 }
+
+.toolbox .group .item{
+	width: 24px;
+	height: 24px;	
+}
+
+.toolbox .group .item img{
+	width: 100%;
+	filter: invert();
+}
+
+.toolbox.left{
+	left: 0px;
+	top: 0px;
+}
+
+.toolbox.right{
+	right: 0px;
+	top: 0px;
+}
+
+#canvas{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;	
+}
+
