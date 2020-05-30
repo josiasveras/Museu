@@ -37,6 +37,7 @@ export default class Paint{
 		
 		switch(this.tool){
 			case TOOL_LINE:
+			case TOOL_RECTANGLE:
 				this.drawShape();
 				break;
 			default:
@@ -54,8 +55,14 @@ export default class Paint{
 		this.context.putImageData(this.savedData, 0, 0);
 
 		this.context.beginPath();
-		this.context.moveTo(this.starPos.x, this.starPos.y);
-		this.context.lineTo(this.currentPos.x, this.currentPos.y);
+
+		if (this.tool == TOOL_LINE){
+			this.context.moveTo(this.starPos.x, this.starPos.y);
+			this.context.lineTo(this.currentPos.x, this.currentPos.y);
+		}else if(this.tool == TOOL_RECTANGLE){
+			this.context.rect(this.starPos.x, this.starPos.y, this.currentPos.x - this.starPos.x, this.currentPos.y - this.starPos.y);
+		}
+
 		this.context.stroke();	
 
 	}
