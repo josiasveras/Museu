@@ -1,6 +1,8 @@
 import Point from './point.model.js';
+
 import {TOOL_LINE, TOOL_RECTANGLE, TOOL_CIRCLE, TOOL_TRIANGLE, TOOL_PAINT_BUCKET, TOOL_PENCIL, TOOL_BRUSH, TOOL_ERASER} from './tool.js';
-import { getMouseCoordsOnCanvas } from  './utility.js';
+
+import { getMouseCoordsOnCanvas, findDistance } from  './utility.js';
 
 export default class Paint{
 
@@ -38,6 +40,7 @@ export default class Paint{
 		switch(this.tool){
 			case TOOL_LINE:
 			case TOOL_RECTANGLE:
+			case TOOL_CIRCLE:
 				this.drawShape();
 				break;
 			default:
@@ -61,6 +64,9 @@ export default class Paint{
 			this.context.lineTo(this.currentPos.x, this.currentPos.y);
 		}else if(this.tool == TOOL_RECTANGLE){
 			this.context.rect(this.starPos.x, this.starPos.y, this.currentPos.x - this.starPos.x, this.currentPos.y - this.starPos.y);
+		}else if(this.tool == TOOL_CIRCLE){
+			let distance = findDistance(this.starPos, this.currentPos);
+			this.context.arc(this.starPos.x, this.starPos.y, distance, 0, 2 * Math.PI, false);
 		}
 
 		this.context.stroke();	
