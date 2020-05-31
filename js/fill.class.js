@@ -12,7 +12,7 @@ export default class Fill{
 
 		const targetColor = this.getPixel(point);
 
-		//console.log(targetColor);
+		console.log(targetColor);
 
 		const fillColor = this.hexToRgba(color);
 
@@ -59,7 +59,7 @@ export default class Fill{
 		}
 	}
 
-	getPixel(point){
+	/*getPixel(point){
 		//Possível origem do bug no "//console.log(targetColor); undefined"
 		if(point.x < 0 || point.y < 0 || point.x >= this.imageData.width, point.y >= this.imageData.height){
 			return [-1, -1, -1, -1]; //Cor impossível
@@ -75,7 +75,23 @@ export default class Fill{
 			];
 		}
 
-	}
+	}*/
+
+	getPixel(point) {
+        
+        if (point.x < 0 || point.y < 0 || point.x >= this.imageData.width || point.y >= this.imageData.height) {
+            return [-1, -1, -1, -1];  //Cor impossível
+        } else {
+            
+            const offset = (point.y * this.imageData.width + point.x) * 4;
+
+            return [this.imageData.data[offset + 0], //vermelho
+            this.imageData.data[offset + 1], //verde
+            this.imageData.data[offset + 2], //azul
+            this.imageData.data[offset + 3] //alfa
+            ]
+        }
+    }
 
 	setPixel(point, fillColor){
 		const offset = (point.y * this.imageData.width + point.x) * 4;
