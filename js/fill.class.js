@@ -12,7 +12,7 @@ export default class Fill{
 
 		const targetColor = this.getPixel(point);
 
-		console.log(targetColor);
+		//console.log(targetColor);
 
 		const fillColor = this.hexToRgba(color);
 
