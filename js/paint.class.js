@@ -30,7 +30,9 @@ export default class Paint{
 
 		this.starPos = getMouseCoordsOnCanvas(e, this.canvas);
 
-		console.log(this.starPos);
+		if (this.tool == TOOL_PENCIL) {
+			this.context.moveTo(this.starPos.x, this.starPos.y);
+		}
 
 	}
 
@@ -44,6 +46,11 @@ export default class Paint{
 			case TOOL_TRIANGLE:
 				this.drawShape();
 				break;
+
+			case TOOL_PENCIL:
+				this.drawFreeLine();
+				break;
+
 			default:
 				break;
 		}
@@ -86,6 +93,11 @@ export default class Paint{
 
 		this.context.stroke();	
 
+	}
+
+	drawFreeLine(){
+		this.context.lineTo(this.currentPos.x, this.currentPos.y);	
+		this.context.stroke();
 	}
 
 }
