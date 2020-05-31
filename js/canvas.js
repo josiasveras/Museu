@@ -5,6 +5,7 @@ import Paint from './paint.class.js';
 
 var paint = new Paint("canvas");
 paint.activeTool = TOOL_LINE;
+paint.lineWidth = 1;
 paint.init();
 
 /* Início função EventListener "data-command"
@@ -70,7 +71,10 @@ document.querySelectorAll("[data-line-width]").forEach(
 	item => {
 		item.addEventListener("click", e => {
 			document.querySelector("[data-line-width].active").classList.toggle("active");
-			item.classList.toggle("active");	
+			item.classList.toggle("active");
+
+			let linewidth = item.getAttribute("data-line-width");
+			paint.lineWidth = linewidth;
 		});
 	}
 );
