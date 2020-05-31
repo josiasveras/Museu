@@ -22,6 +22,10 @@ export default class Paint{
 		this.context.lineWidth = this._lineWidth;
 	}
 
+	set brushSize(brushsize){
+		this._brushSize = brushsize;
+	}
+
 	init(){
 		this.canvas.onmousedown = e => this.onMouseDown(e);
 	}
@@ -35,7 +39,7 @@ export default class Paint{
 
 		this.starPos = getMouseCoordsOnCanvas(e, this.canvas);
 
-		if (this.tool == TOOL_PENCIL) {
+		if (this.tool == TOOL_PENCIL || this.tool == TOOL_BRUSH){
 			this.context.beginPath();
 			this.context.moveTo(this.starPos.x, this.starPos.y);
 		}
@@ -56,6 +60,9 @@ export default class Paint{
 			case TOOL_PENCIL:
 				this.drawFreeLine(this._lineWidth);
 				break;
+
+			case TOOL_BRUSH:
+				this.drawFreeLine(this._brushSize);
 
 			default:
 				break;
