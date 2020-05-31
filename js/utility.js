@@ -1,11 +1,12 @@
 import Point from './point.model.js';
 
-//Função para pegar as coordenadas do mouse no elemento canvas
+//Função para pegar as coordenadas do mouse do cliente no elemento canvas
 export function getMouseCoordsOnCanvas(e, canvas){
 	//Retornando o tamanho do elemento "canvas" com o valor das propriedades: "left, top, right, bottom, x, y, width, height"
 	let rect = canvas.getBoundingClientRect();
-	let x = e.clientX - rect.left;
-	let y = e.clientY - rect.top;
+	//Retornando as coordenadas X e Y do mouse do cliente descontada a diferença do documento inteiro em relação ao elemento Canvas.
+	let x = Math.round(e.clientX - rect.left);
+	let y = Math.round(e.clientY - rect.top);
 	return new Point(x, y);//Retornando a instância da classe "Point" para facilitar a reutilização da mesma
 }
 
