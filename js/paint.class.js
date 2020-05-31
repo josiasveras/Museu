@@ -4,6 +4,8 @@ import {TOOL_LINE, TOOL_RECTANGLE, TOOL_CIRCLE, TOOL_TRIANGLE, TOOL_PAINT_BUCKET
 
 import { getMouseCoordsOnCanvas, findDistance } from  './utility.js';
 
+import Fill from './fill.class.js';
+
 export default class Paint{
 
 	constructor(canvasId){
@@ -47,6 +49,10 @@ export default class Paint{
 		if (this.tool == TOOL_PENCIL || this.tool == TOOL_BRUSH){
 			this.context.beginPath();
 			this.context.moveTo(this.starPos.x, this.starPos.y);
+		
+		}else if(this.tool == TOOL_PAINT_BUCKET){
+			new Fill(this.canvas, this.starPos, this.color);
+			//new Fill(this.canvas, Math.round(this.starPos.x), Math.round(this.starPos.y), this.color);
 		}
 
 	}
