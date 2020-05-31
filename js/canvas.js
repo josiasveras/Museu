@@ -7,7 +7,7 @@ var paint = new Paint("canvas");
 paint.activeTool = TOOL_LINE;
 paint.lineWidth = 1;
 paint.brushSize = 4;
-paint.selectedTool = "#000000";
+paint.selectedColor = "#000000";
 paint.init();
 
 /* Início função EventListener "data-command"
