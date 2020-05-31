@@ -49,6 +49,7 @@ document.querySelectorAll("[data-tool]").forEach(
 					break;
 
 				case TOOL_BRUSH:
+				case TOOL_ERASER:
 					//Tornar visível o conteúdo das classes "group linewidths for-brush"
 					document.querySelector(".group.for-brush").style.display = "block";
 					//Tornar invisível o conteúdo das classes "group linewidths for-shapes"
