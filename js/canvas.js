@@ -6,6 +6,7 @@ import Paint from './paint.class.js';
 var paint = new Paint("canvas");
 paint.activeTool = TOOL_LINE;
 paint.lineWidth = 1;
+paint.brushSize = 4;
 paint.init();
 
 /* Início função EventListener "data-command"
@@ -81,17 +82,20 @@ document.querySelectorAll("[data-line-width]").forEach(
 /* Fim função EventListener "data-line-width"
 ---------------------------------------------------------------- */
 
-/* Início função EventListener "data-brush-width"
+/* Início função EventListener "data-brush-size"
 ---------------------------------------------------------------- */
-document.querySelectorAll("[data-brush-width]").forEach(
+document.querySelectorAll("[data-brush-size]").forEach(
 	item => {
 		item.addEventListener("click", e => {
-			document.querySelector("[data-brush-width].active").classList.toggle("active");
-			item.classList.toggle("active");	
+			document.querySelector("[data-brush-size].active").classList.toggle("active");
+			item.classList.toggle("active");
+
+			let brushSize = item.getAttribute("data-brush-size");
+			paint.brushSize = brushSize;
 		});
 	}
 );
-/* Fim função EventListener "data-brush-width"
+/* Fim função EventListener "data-brush-size"
 ---------------------------------------------------------------- */
 
 /* Início função EventListener "data-color"
