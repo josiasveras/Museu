@@ -72,22 +72,22 @@
                             <h3>Exposições</h3>
                             <ul>
                                 <li>
-                                    <a href="#">Os assustadores insetos</a>
+                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
                                 </li>
                                 <li>
-                                    <a href="#">O crânio de Luzia, a mulher mais antiga do Brasil</a>
+                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
                                 </li>
                                 <li>
-                                    <a href="#">Preguiça gigante e tigre-dentes-de-sabre</a>
+                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
                                 </li>
                                 <li>
-                                    <a href="#">Plantas do Brasil Central</a>
+                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
                                 </li>
                                 <li>
-                                    <a href="#">Teresa Cristina: A imperatriz Arqueóloga</a>
+                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
                                 </li>
                                 <li>
-                                    <a href="#">Arte com Dinossauros - Paleoarte</a>
+                                    <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
                                 </li>
                                 <li>
                                     <a href="#"><strong>Veja todos (65)</strong>></a>
@@ -99,10 +99,8 @@
                         <article id="historia">
                             <h3>200 anos de história</h3>
 
-                            <p>O Museu Nacional tem por missão: <b><i>"Descobrir e interpretar fenômenos do mundo natural e as culturas humanas, difundindo o seu conhecimento com base na realização de pesquisas, 
-                            organização de coleções, formação de recursos humanos e educação científica, assim como atuar na preservação do patrimônio científico, histórico, 
-                            natural e cultural em benefício da sociedade."</b></i></p>
-                            <a>O Museu é uma instituição autônoma, integrante do Fórum de Ciência e Cultura da Universidade Federal do Rio de Janeiro, vinculada ao Ministério da Educação que completou 200 anos em 2018.</a>
+                            <p>O Museu Senac tem por missão: <b><i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non tincidunt nibh. Suspendisse gravida facilisis sem in congue. Pellentesque at nunc ligula. Praesent ac nibh egestas, ultricies dolor quis, ultricies dolor. Cras mattis augue at libero gravida tempor. Morbi interdum ac diam at malesuada. Etiam scelerisque vehicula quam, vitae convallis tortor pretium id. Fusce efficitur sapien ut massa luctus, vel commodo tellus viverra. Pellentesque fermentum orci nibh, quis gravida elit interdum a."</b></i></p>
+                            <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non tincidunt nibh. Suspendisse gravida facilisis sem in congue. Pellentesque at nunc ligula. Praesent ac nibh egestas, ultricies dolor quis, ultricies dolor. Cras mattis augue at libero gravida tempor.</a>
                             <a href="#"><strong>Leia mais</strong></a>
                         </article>
 
