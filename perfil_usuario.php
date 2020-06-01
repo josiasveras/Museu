@@ -1,3 +1,9 @@
+<?php 
+    
+   require "./class-php/user.class.php";
+   $user = new User("museu", "localhost", "root", "");
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -39,6 +45,12 @@
                     <br><br><br><br><br><br>
                     <h2 style="text-align:center;">Perfil público</h2>
                     <h3 style="text-align:center;">Informações sobre você</h3>
+
+                    <?php 
+                        $data = $user->selectUser();
+                        var_dump($data);
+                    ?>
+
                     <form>
                       <div class="form-group">
                         <label for="nome">Nome</label>
