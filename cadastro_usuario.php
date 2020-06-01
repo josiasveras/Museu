@@ -84,7 +84,7 @@
                       </div>
                       <div class="form-group">
                         <label for="dtNasc">Data de nascimento</label>
-                        <input type="text" class="form-control" id="dtNasc" name="dtNasc" placeholder="Ex: dd/mm/aaaa">
+                        <input type="text" class="form-control" id="dtNasc" name="dtNasc" placeholder="Ex: aaaa-mm-dd">
                       </div>
                       <div class="form-group">
                         <label for="genero">Gênero</label>
