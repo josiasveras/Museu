@@ -21,6 +21,7 @@ document.querySelectorAll("[data-command]").forEach(
 
 			if (command === 'undo') {
 				paint.undoPaint();
+			//Lógica para salvar o desenho no canvas como imagem
 			}else if(command === 'download'){
 				var canvas = document.getElementById("canvas");
 				var image = canvas.toDataURL("image/png", 1.0).replace("image/png", "image/octet-stream");
