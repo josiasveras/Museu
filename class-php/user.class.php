@@ -31,7 +31,7 @@
 		public function createUser($nome, $email, $senha, $dt_nasc, $genero){
 
 			//Verificando se já tem o email cadastrado antes de cadastrar o usuário
-			$cmd = $this->pdo->prepare("SELECT id FROM pessoa WHERE email = :e");
+			$cmd = $this->pdo->prepare("SELECT id_usuario FROM usuarios WHERE email = :e");
 			$cmd->bindValue(":e",$email);
 			$cmd->execute();
 
