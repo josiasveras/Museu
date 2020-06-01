@@ -118,7 +118,7 @@
                     </section>
 
                     <!-- Início visita -->
-                    <section id="visita">
+                    <!-- <section id="visita">
                         <h4>Faça uma visita</h4>
                         <form>
                             <fieldset>
@@ -135,7 +135,7 @@
                             <input class="botao" type="submit" value="Verificar disponibilidade">
 
                         </form>
-                    </section>
+                    </section> -->
                     <!-- Fim visita -->
 
                     <section id="galeria">
