@@ -47,8 +47,14 @@
                     <h3 style="text-align:center;">Informações sobre você</h3>
 
                     <?php 
-                        $data = $user->selectUser();
-                        var_dump($data);
+
+                        /*$data = $user->selectUser();
+
+                        if (count($data) > 0) {
+                                foreach ($data as $key => $value) {
+                                    
+                                }
+                        }*/
                     ?>
 
                     <form>
