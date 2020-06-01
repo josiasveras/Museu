@@ -92,7 +92,7 @@
         </div>
         <!-- Fim toolbox left -->
 
-        <canvas id="canvas" width="640" height="480"></canvas>
+        <canvas id="canvas" width="800" height="600"></canvas>
 
         <!-- Início toolbox right -->
         <div class="toolbox right">
