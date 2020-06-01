@@ -34,6 +34,22 @@ try {
 			return $res;
 
 			//echo();
+
+
+						//Matriz seelct
+                        $data = $user->selectUser();
+
+                        //Utilizo um "for" e dentro dele um "foreach" pois a variável "$data" é uma matriz (array dentro de array)
+                        if (count($data) > 0) {
+                            for ($i=0; $i < count($data); $i++) { 
+                                foreach ($data[$i] as $key => $value) {
+                                    if ($key != "id") {
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    
 			
 
 ?>
