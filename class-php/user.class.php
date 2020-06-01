@@ -28,7 +28,34 @@
 		}
 
 		//Função para inserir os dados do usuário no banco
-		public function createUser(){
+		public function createUser($nome, $email, $senha, $dt_nasc, $genero){
+
+			//Verificando se já tem o email cadastrado antes de cadastrar o usuário
+			$cmd = $this->pdo->prepare("SELECT id FROM pessoa WHERE email = :e");
+			$cmd->bindValue(":e",$email);
+			$cmd->execute();
+
+			if ($cmd->rowCount() > 0)//Email já existe no banco 
+			{
+
+				return false;
+
+			}else //Email não foi encontrado no banco
+			{
+				//Inserindo usuário no banco
+				$cmd = $this->pdo->prepare("INSERT INTO usuarios (nome_usuario, email, senha, dt_nasc, genero) VALUES (:n, :e, :s, :dn, :g)");
+
+				$cmd->bindValue(":n",$nome);
+				$cmd->bindValue(":e",$email);
+				$cmd->bindValue(":s",$senha);
+				$cmd->bindValue(":dn",$dt_nasc);
+				$cmd->bindValue(":g",$genero);
+				$cmd->execute();
+
+				return true;
+
+			}
+
 
 		}
 
