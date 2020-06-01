@@ -42,6 +42,9 @@ NOTAS SOBRE TODO O PROJETO:
 		-Flood fill algorithm
 		https://en.wikipedia.org/wiki/Flood_fill
 
+		-PHP Data Objects
+		https://www.php.net/manual/pt_BR/book.pdo.php
+
 	------------------------------------------------------------------------------------------------------------------------
 		ONDE PAREI NO TUTORIAL:
 		Paint App Tutorial | HTML5, Canvas API, JavaScript, ES6 - Ajay Badgujar - 6 / 8 - 30/05/2020 23:33
