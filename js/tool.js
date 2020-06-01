@@ -1,4 +1,4 @@
-
+//Constantes que representam as ferramentas utilizadas para desenhar 
 export const TOOL_LINE = 'line';
 export const TOOL_RECTANGLE = 'rectangle';
 export const TOOL_CIRCLE = 'circle';

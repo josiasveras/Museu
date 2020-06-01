@@ -37,6 +37,7 @@ export default class Paint{
 		this.canvas.onmousedown = e => this.onMouseDown(e);
 	}
 
+	//Função com a lógica para utilizar as ferramentas clicando o mouse
 	onMouseDown(e){
 
 		this.savedData = this.context.getImageData(0, 0, this.canvas.clientWidth, this.canvas.height);
@@ -59,6 +60,7 @@ export default class Paint{
 
 	}
 
+	//Função com a lógica para utilizar as ferramentas movimentando o mouse
 	onMouseMove(e){
 		this.currentPos = getMouseCoordsOnCanvas(e, this.canvas);
 		
@@ -123,6 +125,7 @@ export default class Paint{
 
 	}
 
+	//Função com a lógica para desenhar a linha
 	drawFreeLine(lineWidth){
 		this.context.lineWidth = lineWidth;
 		this.context.lineTo(this.currentPos.x, this.currentPos.y);	

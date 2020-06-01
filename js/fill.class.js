@@ -24,6 +24,7 @@ export default class Fill{
 
 	}
 
+	//Função com a lógica do Flood fill algorithm usado para preencher as formas com a ferramenta balde de tinta
 	floodFill(point, targetColor, fillColor){
 		if(this.colorsMatch(targetColor, fillColor)) return;
 
@@ -40,6 +41,7 @@ export default class Fill{
 		}
 	}
 
+	//Função com a lógica do Flood fill algorithm usado para preencher as formas com a ferramenta balde de tinta
 	fillColor(){
 		if (this.fillStack.length){
 
@@ -77,6 +79,7 @@ export default class Fill{
 
 	}*/
 
+	//Função com a lógica do Flood fill algorithm usado para preencher as formas com a ferramenta balde de tinta
 	getPixel(point) {
         
         if (point.x < 0 || point.y < 0 || point.x >= this.imageData.width || point.y >= this.imageData.height) {
@@ -93,6 +96,7 @@ export default class Fill{
         }
     }
 
+    //Função com a lógica do Flood fill algorithm usado para preencher as formas com a ferramenta balde de tinta
 	setPixel(point, fillColor){
 		const offset = (point.y * this.imageData.width + point.x) * 4;
 		
@@ -102,11 +106,13 @@ export default class Fill{
 		this.imageData.data[offset + 3 ]	= fillColor[3]; // alfa
 	}
 
+	//Função com a lógica do Flood fill algorithm usado para preencher as formas com a ferramenta balde de tinta
 	colorsMatch(color1, color2){
 		return color1[0] === color2[0] && color1[1] === color2[1]
 			   && color1[2] === color2[2] && color1[3] === color2[3];
 	}
 
+	//Função com a lógica do Flood fill algorithm usado para preencher as formas com a ferramenta balde de tinta
 	hexToRgba(hex){
 		var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
 		return[
