@@ -1,5 +1,5 @@
-CREATE DATABASE Museu;
-USE Museu;
+CREATE DATABASE museu;
+USE museu;
 
 CREATE TABLE `usuarios`
 (
