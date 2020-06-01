@@ -44,9 +44,3 @@ NOTAS SOBRE TODO O PROJETO:
 
 		-PHP Data Objects
 		https://www.php.net/manual/pt_BR/book.pdo.php
-
-	------------------------------------------------------------------------------------------------------------------------
-		ONDE PAREI NO TUTORIAL:
-		Paint App Tutorial | HTML5, Canvas API, JavaScript, ES6 - Ajay Badgujar - 6 / 8 - 30/05/2020 23:33
-
-		!22:00!
