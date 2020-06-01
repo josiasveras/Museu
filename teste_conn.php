@@ -53,3 +53,27 @@ try {
 			
 
 ?>
+
+
+if (isset($_POST['nome'])) {
+
+                //Recebendo o que o usuário digita nos inputs
+                $nome = addslashes($_POST['nome']);
+                $email = addslashes($_POST['email']);
+                $senha = addslashes($_POST['senha']);
+                $dt_nasc = addslashes($_POST['dtNasc']);
+                $genero = addslashes($_POST['genero']);
+
+                if (!empty($nome) && !empty($email) && !empty($senha) && !empty($dt_nasc) && !empty($genero)) {
+                        //Cadastrar
+                        if (!$user->createUser($nome, $email, $senha, $dt_nasc, $genero)){
+                            echo "Email já cadastrado!!";  
+                        }
+                    
+                }else{
+
+                    echo "Preencha todos os campos!!";
+
+                }
+                     
+            }
