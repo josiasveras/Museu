@@ -1,6 +1,6 @@
 <?php 
     
-   require "./class-php/user.class.php";
+   require_once "./class-php/user.class.php";
    $user = new User("museu", "localhost", "root", "");
 
 ?>
