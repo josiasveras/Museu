@@ -1,3 +1,9 @@
+<?php 
+    
+   require "./class-php/user.class.php";
+   $user = new User("museu", "localhost", "root", "");
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -7,6 +13,33 @@
     </head>
 
     <body>
+
+        <?php 
+
+            if (isset($_POST['nome'])) {
+
+                    //Recebendo o que o usuário digita nos inputs
+                    $nome = addslashes($_POST['nome']);
+                    $email = addslashes($_POST['email']);
+                    $senha = addslashes($_POST['senha']);
+                    $dt_nasc = addslashes($_POST['dtNasc']);
+                    $genero = addslashes($_POST['genero']);
+
+                    if (!empty($nome) && !empty($email) && !empty($senha) && !empty($dt_nasc) && !empty($genero)) {
+                        //Cadastrar
+                        if (!$user->createUser($nome, $email, $senha, $dt_nasc, $genero)) {
+                            echo "alert(Email já cadastrado!!)";  
+                        
+                    }else{
+
+                        echo "alert(Preencha todos os campos!!)";
+
+                    }
+                     
+                }
+            }
+
+        ?>
 
         <!-- Início container -->
         <div id="container">
@@ -36,7 +69,7 @@
                 <!-- Início form-wrapper -->
                 <div class="form-wrapper">
                     <h2 style="text-align:center;">Criação de perfil público</h2>
-                    <form>
+                    <form method="POST">
                       <div class="form-group">
                         <label for="nome">Nome</label>
                         <input type="text" class="form-control" id="nome" name="nome">
@@ -47,7 +80,7 @@
                       </div>
                       <div class="form-group">
                         <label for="senha">Senha</label>
-                        <input type="password" class="form-control" id="senha" placeholder="8 ou mais caracteres">
+                        <input type="password" class="form-control" id="senha" name="senha" placeholder="8 ou mais caracteres">
                       </div>
                       <div class="form-group">
                         <label for="dtNasc">Data de nascimento</label>
