@@ -137,6 +137,7 @@ export default class Paint{
 		this.context.stroke();
 	}
 
+	//Função com a lógica para implementar a ferramenta de desfazer a ação
 	undoPaint(){
 		if (this.undoStack.length > 0) {
 			this.context.putImageData(this.undoStack[this.undoStack.length - 1], 0, 0);
