@@ -5,13 +5,13 @@
 		private $pdo;
 
 		//Conexão com o banco de dados, construtor da classe (primeiro trecho código que será acessado ao instanciar a classe)
-		public function __contruct($dbname, $host, $user, $senha){
+		public function __construct($dbname, $host, $user, $senha){
 
 			try {
 
-				$this->pdo = new PDO("mysql:dbname=".$dbname.";host=".$host,$user,$senha);
+				$this->pdo = new \PDO("mysql:dbname=".$dbname.";host=".$host,$user,$senha);
 
-				//echo "Deu bom!";
+				//echo '<pre>'; print_r($pdo); echo '</pre>';
 				
 			} catch (PDOException $e) {
 
