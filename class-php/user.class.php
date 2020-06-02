@@ -3,6 +3,7 @@
 	Class User{
 
 		private $pdo;
+		public $msgErro = "";
 
 		//Conexão com o banco de dados, construtor da classe (primeiro trecho código que será acessado ao instanciar a classe)
 		public function __construct($dbname, $host, $user, $senha){
@@ -15,14 +16,16 @@
 				
 			} catch (PDOException $e) {
 
-				echo "Erro com o banco de dados: ".$e->getMessage();
+				$msgErro = $e->getMessage();
+				console.log($msgErro);
 
 				//Se pegar esse erro todo o código é parado 
 				exit();
 				
 			} catch (Exception $e) {
 
-				echo "Erro genérico: ".$e->getMessage();
+				$msgErro = $e->getMessage();
+				console.log($msgErro);
 				
 			}
 		}
@@ -47,7 +50,7 @@
 
 				$cmd->bindValue(":n",$nome);
 				$cmd->bindValue(":e",$email);
-				$cmd->bindValue(":s",$senha);
+				$cmd->bindValue(":s",md5($senha));
 				$cmd->bindValue(":dn",$dt_nasc);
 				$cmd->bindValue(":g",$genero);
 				$cmd->execute();
@@ -88,7 +91,30 @@
 
 		//Função para deletar os dados do usuário no banco
 		public function deleteUser(){
-			
+						
+		}
+
+		public function loginUser($email, $senha){
+			//Verificando se já tem o email e senha cadastrados...
+			$cmd = $this->pdo->prepare("SELECT id_usuario FROM usuarios WHERE email = :e AND senha = :s");
+			$cmd->bindValue(":e",$email);
+			$cmd->bindValue(":s",md5($senha));
+			$cmd->execute();
+
+			//Se sim
+			if ($cmd->rowCount() > 0) {
+				//Entrando no sistema e guardando o id do usuário na sessão
+				$dados = $cmd->fetch();
+				session_start();
+				$_SESSION['id_usuario'] = $dados['id_usuario'];
+				return true; //Usuário logado com sucesso
+			}else{
+
+				return false; //Usuário não logado
+
+			}
+				
+
 		}
 
 		/*//Inserindo dados
@@ -101,6 +127,7 @@
 		$res->execute();
 
 		//INSERT INTO `usuarios`(`nome_usuario`, `email`, `senha`, `dt_nasc`, `genero`) VALUES ('Jorzias Veras','jorzias_veras@museu.com.br',(md5(123)),'1991-01-28','M');*/
+			//}
 
 	}	
 
