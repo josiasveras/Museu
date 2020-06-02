@@ -52,4 +52,5 @@ NOTAS SOBRE TODO O PROJETO:
 		2-salvar obra no banco
 		3-exibir obras
 		4-gerar SVG pra salvar no banco - GETsvg - //jsfiddle.net/pfp9y5xp
-		5-Obra não pode ser editada novamente
+		5-obra não pode ser editada novamente
+		6-apresentação das obras (slide)
