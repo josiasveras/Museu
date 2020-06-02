@@ -24,11 +24,16 @@
                 $dt_nasc = addslashes($_POST['dtNasc']);
                 $genero = addslashes($_POST['genero']);
 
+                //Verificando se os campos não estão vazios
                 if (!empty($nome) && !empty($email) && !empty($senha) && !empty($dt_nasc) && !empty($genero)) {
                     
-                        //Cadastrar
+                        //Verificando se o usuário já está cadastrado
                         if (!$user->createUser($nome, $email, $senha, $dt_nasc, $genero)){
                             echo '<div class="alert alert-danger" role="alert"> Email já cadastrado! </div>'; 
+                        
+                        //Cadastrar
+                        }else{
+                            $user->createUser($nome, $email, $senha, $dt_nasc, $genero);
                         }
 
                 }else{
