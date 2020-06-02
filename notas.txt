@@ -44,3 +44,12 @@ NOTAS SOBRE TODO O PROJETO:
 
 		-PHP Data Objects
 		https://www.php.net/manual/pt_BR/book.pdo.php
+
+		
+
+
+		1-login
+		2-salvar obra no banco
+		3-exibir obras
+		4-gerar SVG pra salvar no banco - GETsvg - //jsfiddle.net/pfp9y5xp
+		5-Obra não pode ser editada novamente
