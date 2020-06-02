@@ -15,8 +15,17 @@ MATERIAL USADO FONTES:
 	-back-art-login
 	https://pixabay.com/pt/photos/abstract-arte-fundo-pintura-2468874/
 
-if($senha == $confirmarSenha){
+CONFIRMAR SENHAS DUPLAS:
+	if($senha == $confirmarSenha){
 	$user->createUser($nome, $email, $senha, $dt_nasc, $genero);
 	}else{
 	echo "Senhas não conferem";
 	}
+
+VERIFICAR EXISTÊNCIA DA SESSÃO:
+	session_start();
+	if(!isset($_SESSION['id_usuario'])){
+		header("location: index.php");
+		exit;
+	}
+
