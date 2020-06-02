@@ -139,19 +139,19 @@
                     <section id="galeria">
                         <h4>Galeria de fotos</h4>
 
-                        <a href="">
+                        <a href="#">
                             <img src="img/imagem1.jpg" height="93" width="93px">
                         </a>
 
-                        <a href="">
+                        <a href="#">
                             <img src="img/imagem2.jpg" height="93" width="93px">
                         </a>
 
-                        <a href="">
+                        <a href="#">
                             <img src="img/imagem3.jpg" height="93" width="93px">
                         </a>
                         
-                        <a href="">
+                        <a href="#">
                             <img src="img/imagem4.jpg" height="93" width="93px">
                         </a>
 
