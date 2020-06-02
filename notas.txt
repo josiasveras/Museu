@@ -1,8 +1,22 @@
 
 TO DO:
-1-login
-2-salvar obra no banco
-3-exibir obras
-4-gerar SVG pra salvar no banco - GETsvg - //jsfiddle.net/pfp9y5xp
-5-obra não pode ser editada novamente
-6-apresentação das obras (slide)
+	1-login
+	2-salvar obra no banco
+	3-exibir obras
+	4-gerar SVG pra salvar no banco - GETsvg - //jsfiddle.net/pfp9y5xp
+	5-obra não pode ser editada novamente
+	6-apresentação das obras (slide)
+	7-Conflitos Bootstrap/CSS
+	8-Banco: deletar linhas `dt_nasc` e `genero`'
+
+MATERIAL USADO FONTES:
+	
+	IMAGENS:
+	-back-art-login
+	https://pixabay.com/pt/photos/abstract-arte-fundo-pintura-2468874/
+
+if($senha == $confirmarSenha){
+	$user->createUser($nome, $email, $senha, $dt_nasc, $genero);
+	}else{
+	echo "Senhas não conferem";
+	}
