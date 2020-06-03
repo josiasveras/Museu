@@ -20,6 +20,13 @@
 
     <body>
 
+        <?php 
+        session_start();
+        echo "<prev>";
+        print_r($_SESSION);
+        echo "</prev>";
+        ?>
+
         <!-- Início container -->
         <div id="container">
 
