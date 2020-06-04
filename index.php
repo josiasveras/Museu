@@ -46,8 +46,12 @@
                             
                     ?>
                             <div class="dropdown">
-                                <button class="dropbtn" onclick="window.location.href = 'login.php'">Fazer login</button>
-                            </div>
+                                    <button class="dropbtn">Não Logado</button>
+                                    <div class="dropdown-content">
+                                        <a href="login.php">Login</a>
+                                        <a href="cadastro_usuario.php">Inscrever-se</a>
+                                    </div>
+                                </div>
                     <?php
                         }else{
 
@@ -57,7 +61,7 @@
                                     <button class="dropbtn">Logado</button>
                                     <div class="dropdown-content">
                                         <a href="perfil_usuario.php">Perfil</a>
-                                        <a href="teste.php">Sair</a>
+                                        <a href="logout.php">Sair</a>
                                     </div>
                                 </div>';
 
