@@ -107,6 +107,7 @@
 				$dados = $cmd->fetch();
 				session_start();
 				$_SESSION['id_usuario'] = $dados['id_usuario'];
+				//$_SESSION['bacalhau3'] = $dados['nome_usuario'];//**
 				return true; //Usuário logado com sucesso
 			}else{
 
