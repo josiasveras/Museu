@@ -20,13 +20,6 @@
 
     <body>
 
-        <?php 
-        session_start();
-        echo "<prev>";
-        print_r($_SESSION);
-        echo "</prev>";
-        ?>
-
         <!-- Início container -->
         <div id="container">
 
@@ -44,14 +37,32 @@
                         <li><a href="criar_obra.php" target="_blank">Criar obra</a></li>
                     </ul>
 
-                    <div class="dropdown">
-                        <button class="dropbtn">Olá, Jorzias</button>
-                        <div class="dropdown-content">
-                            <a href="./">Perfil</a>
-                            <a href="#" onclick="">Sair</a>
-                        </div>
-                    </div>
+                    <?php
 
+                        session_start();  
+                        
+                        if(!isset($_SESSION['id_usuario'])){
+
+                            
+                    ?>
+                            <div class="dropdown">
+                                <button class="dropbtn" onclick="window.location.href = 'login.php'">Fazer login</button>
+                            </div>
+                    <?php
+                        }else{
+
+                            /*session_start();*/
+
+                            echo'<div class="dropdown">
+                                    <button class="dropbtn">Logado</button>
+                                    <div class="dropdown-content">
+                                        <a href="perfil_usuario.php">Perfil</a>
+                                        <a href="teste.php">Sair</a>
+                                    </div>
+                                </div>';
+
+                        } 
+                    ?>
                 </nav>
                 <!-- Fim nav -->
 
