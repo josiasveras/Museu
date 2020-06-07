@@ -31,7 +31,7 @@
 		}
 
 		//Função para inserir os dados do usuário no banco
-		public function createUser($nome, $email, $senha, $dt_nasc, $genero){
+		public function createUser($nome, $email, $senha, $idade){
 
 			//Verificando se já tem o email cadastrado antes de cadastrar o usuário
 			$cmd = $this->pdo->prepare("SELECT id_usuario FROM usuarios WHERE email = :e");
@@ -46,13 +46,12 @@
 			}else //Email não foi encontrado no banco
 			{
 				//Inserindo usuário no banco
-				$cmd = $this->pdo->prepare("INSERT INTO usuarios (nome_usuario, email, senha, dt_nasc, genero) VALUES (:n, :e, :s, :dn, :g)");
+				$cmd = $this->pdo->prepare("INSERT INTO usuarios (nome_usuario, email, senha, idade) VALUES (:n, :e, :s, :i)");
 
 				$cmd->bindValue(":n",$nome);
 				$cmd->bindValue(":e",$email);
 				$cmd->bindValue(":s",md5($senha));
-				$cmd->bindValue(":dn",$dt_nasc);
-				$cmd->bindValue(":g",$genero);
+				$cmd->bindValue(":i",$idade);
 				$cmd->execute();
 
 				return true;
@@ -62,30 +61,39 @@
 
 		}
 
-		//Função para retornar os dados do usuário no banco
-		public function selectUser(){
+		//Função para retornar os dados do usuário no banco por id
+		public function selectUserById($id){
 
-			$res = array();
+				$cmd = $this->pdo->prepare('SELECT * FROM usuarios where id_usuario = :id');
+				
+				$cmd->bindValue(':id', $id);
+				$cmd->execute();
 
-			$cmd = $this->pdo->query("SELECT * FROM usuarios");
-
-			//echo($cmd);
-
-			//"$res" recebe os dados de "$cmd" trannformandos-os em array usando o metódo "fetchAll()"
-			$res = $cmd->fetchAll(PDO::FETCH_ASSOC);
-
-
-			//echo '<pre>'; print_r($res); echo '</pre>';
-
-			return $res;
-
-			//echo();
+				if ($cmd->rowCount() > 0) 
+				{
+					$dados = $cmd->fetch(PDO::FETCH_ASSOC);
+				}else{
+					$dados = array();
+				}
+				
+				return $dados;
 			
 
 		}
 
 		//Função para atualizar os dados do usuário no banco
-		public function updateUser(){
+		public function updateUser($id, $nome, $email, $idade){
+
+				//UPDATE `usuarios` SET `email` = 'wilson_oliver@museu.com' WHERE `usuarios`.`id_usuario` = 26;
+				//Atualizando usuário no banco
+				$cmd = $this->pdo->prepare("UPDATE usuarios SET nome_usuario = :n, email = :e, idade = :i WHERE id_usuario = :id");
+				//$cmd = $this->pdo->prepare("UPDATE usuarios SET (nome_usuario, email, idade) VALUES (:n, :e, :i) WHERE id_usuario = :id");
+
+				$cmd->bindValue(":id",$id);
+				$cmd->bindValue(":n",$nome);
+				$cmd->bindValue(":e",$email);
+				$cmd->bindValue(":i",$idade);
+				$cmd->execute();
 			
 		}
 
