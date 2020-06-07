@@ -150,9 +150,72 @@
 
 		public function buscarObras(){
 
+				$cmd = $this->pdo->query('SELECT *,
+				(SELECT nome_imagem from imagens where fk_id_obra = obras.id_obra LIMIT 1)
+				as foto_obra
+				FROM obras');
+
+				if ($cmd->rowCount() > 0) 
+				{
+					$dados = $cmd->fetchAll(PDO::FETCH_ASSOC);
+				}else{
+					$dados = array();
+				}
+			return $dados;
+
 		}
 
-		public function buscarObrasPorId($id){
+		public function buscarObraPorId($id){
+
+				$cmd = $this->pdo->prepare('SELECT * FROM obras where id_obra = :id');
+				
+				$cmd->bindValue(':id', $id);
+				$cmd->execute();
+
+				if ($cmd->rowCount() > 0) 
+				{
+					$dados = $cmd->fetch(PDO::FETCH_ASSOC);
+				}else{
+					$dados = array();
+				}
+				
+				return $dados;
+
+		}
+
+		public function buscarImagemObraPorId($id){
+
+				$cmd = $this->pdo->prepare('SELECT nome_imagem FROM imagens where fk_id_obra = :id');
+				
+				$cmd->bindValue(':id', $id);
+				$cmd->execute();
+
+				if ($cmd->rowCount() > 0) 
+				{
+					$dados = $cmd->fetch(PDO::FETCH_ASSOC);
+				}else{
+					$dados = array();
+				}
+				
+				return $dados;
+
+		}
+
+		public function buscarAutorObra(){
+
+				$cmd = $this->pdo->prepare('SELECT nome_usuario FROM usuarios where fk_id_obra = :id');
+				
+				$cmd->bindValue(':id', $id);
+				$cmd->execute();
+
+				if ($cmd->rowCount() > 0) 
+				{
+					$dados = $cmd->fetch(PDO::FETCH_ASSOC);
+				}else{
+					$dados = array();
+				}
+				
+				return $dados;
 
 		}
 
