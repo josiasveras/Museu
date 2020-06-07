@@ -21,19 +21,18 @@
                 $nome = addslashes($_POST['nome']);
                 $email = addslashes($_POST['email']);
                 $senha = addslashes($_POST['senha']);
-                $dt_nasc = addslashes($_POST['dtNasc']);
-                $genero = addslashes($_POST['genero']);
+                $idade = addslashes($_POST['idade']);
 
                 //Verificando se os campos não estão vazios
-                if (!empty($nome) && !empty($email) && !empty($senha) && !empty($dt_nasc) && !empty($genero)) {
+                if (!empty($nome) && !empty($email) && !empty($senha) && !empty($idade)) {
                     
                         //Verificando se o usuário já está cadastrado
-                        if (!$user->createUser($nome, $email, $senha, $dt_nasc, $genero)){
+                        if (!$user->createUser($nome, $email, $senha, $idade)){
                             echo '<div class="alert alert-danger" role="alert"> Email já cadastrado! </div>'; 
                         
                         //Cadastrar
                         }else{
-                            $user->createUser($nome, $email, $senha, $dt_nasc, $genero);
+                            $user->createUser($nome, $email, $senha, $idade);
                         }
 
                 }else{
@@ -85,20 +84,12 @@
                       </div>
                       <div class="form-group">
                         <label for="senha">Senha</label>
-                        <input type="password" class="form-control" id="senha" name="senha" placeholder="8 ou mais caracteres">
+                        <input type="password" class="form-control" id="senha" name="senha" placeholder="6 caracteres">
                       </div>
                       <div class="form-group">
-                        <label for="dtNasc">Data de nascimento</label>
-                        <input type="text" class="form-control" id="dtNasc" name="dtNasc" placeholder="Ex: aaaa-mm-dd">
-                      </div>
-                      <div class="form-group">
-                        <label for="genero">Gênero</label>
-                        <select class="form-control" id="genero" name="genero">
-                          <option value="masculino">Masculino</option>
-                          <option value="feminino">Feminino</option>
-                        </select>
-                      </div>
-                      
+                        <label for="dtNasc">Idade</label>
+                        <input type="number" maxlength="3" class="form-control" id="idade" name="idade">
+                      </div> 
                       <br><br>
                       <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
