@@ -118,6 +118,46 @@
 
 		}
 
+		public function salvarObra($nome, $descricao, $fotos = array()){
+
+			session_start();
+
+			//Inserindo a obra
+			$cmd = $this->pdo->prepare('INSERT INTO obras (fk_id_usuario,nome_obra,descricao) values (:fk, :no, :d)');
+			$cmd->bindValue(':fk', $_SESSION['id_usuario']);
+			$cmd->bindValue(':no', $nome);
+			$cmd->bindValue(':d', $descricao);
+			$cmd->execute();
+			$id_obra = $this->pdo->lastInsertId();
+
+
+			if (count($fotos) > 0)//Se veio imagem 
+			{
+
+				for ($i=0; $i < count($fotos); $i++) 
+				{
+					$nome_foto = $fotos[$i]; 
+					$cmd = $this->pdo->prepare('INSERT INTO imagens (nome_imagem,fk_id_obra) values (:ni, :fk)');
+					//Inserir imagem da obra na tabela imagens
+					$cmd->bindValue(':ni', $nome_foto);
+					$cmd->bindValue(':fk', $id_obra);
+					$cmd->execute();
+				}
+
+			}
+
+		}
+
+		public function buscarObras(){
+
+		}
+
+		public function buscarObrasPorId($id){
+
+		}
+
+
+
 		/*//Inserindo dados
 		$res = $pdo->prepare("INSERT INTO usuarios(nome_usuario, email, senha, dt_nasc, genero) VALUES (:n, :e, :s, :dn, :g)");
 		$res->bindValue(":n", "Miriam");
