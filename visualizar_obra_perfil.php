@@ -13,7 +13,7 @@
 
     $dadosObra = $user->buscarObraPorId($id);
     $imagemObra = $user->buscarImagemObraPorId($id);
-    var_dump($imagemObra);
+    //var_dump($imagemObra);
 
 ?>
 
