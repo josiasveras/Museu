@@ -1,3 +1,10 @@
+<?php 
+
+  require_once "./class-php/user.class.php";
+   $user = new User("museu", "localhost", "root", "");
+
+?>
+
 
 <!DOCTYPE html>
 <html>
@@ -34,71 +41,40 @@
             <!-- Início principal -->
             <div id="principal">
 
-
                 <br><br><br><br><br><br>
                 <div class="container">
 
                     <div class="row">
-                      <div class="col-md-4">
-                        <div class="thumbnail">
-                          <a href="visualizar_obra_perfil.php">
-                            <img src="./img/van-gogh.jpg" alt="Lights" style="width:100%">
-                            <div class="caption">
-                              <p>Van Gogh</p>
+
+                      <?php  
+
+                        $dadosObra = $user->buscarObras();
+
+                        if (empty($dadosObra)) 
+                        {
+
+                          echo '<div class="alert alert-danger"" role="alert"> Ainda não há obras cadastradas! </div>';
+
+                        }else
+                        {
+
+                          foreach ($dadosObra as $value) 
+                          {
+                      ?>
+                            <div class="col-md-4">
+                              <div class="thumbnail">
+                                <a href="visualizar_obra_perfil.php?id=<?php echo $value['id_obra']; ?>">
+                                  <img src="./img-obras/<?php echo $value['foto_obra']; ?>" style="width:100%">
+                                  <div class="caption">
+                                    <p><?php echo $value['nome_obra']; ?></p>
+                                  </div>
+                                </a>
+                              </div>
                             </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="thumbnail">
-                          <a href="visualizar_obra_perfil.php">
-                            <img src="./img/van-gogh.jpg" alt="Nature" style="width:100%">
-                            <div class="caption">
-                              <p>Van Gogh</p>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="thumbnail">
-                          <a href="visualizar_obra_perfil.php">
-                            <img src="./img/van-gogh.jpg" alt="Fjords" style="width:100%">
-                            <div class="caption">
-                              <p>Van Gogh</p>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="thumbnail">
-                          <a href="visualizar_obra_perfil.php">
-                            <img src="./img/van-gogh.jpg" alt="Fjords" style="width:100%">
-                            <div class="caption">
-                              <p>Van Gogh</p>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="thumbnail">
-                          <a href="visualizar_obra_perfil.php">
-                            <img src="./img/van-gogh.jpg" alt="Fjords" style="width:100%">
-                            <div class="caption">
-                              <p>Van Gogh</p>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="thumbnail">
-                          <a href="visualizar_obra_perfil.php">
-                            <img src="./img/van-gogh.jpg" alt="Fjords" style="width:100%">
-                            <div class="caption">
-                              <p>Van Gogh</p>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
+                      <?php
+                          }                        
+                        }
+                      ?>
                     </div>
                 </div>
 
