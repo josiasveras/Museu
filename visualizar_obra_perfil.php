@@ -1,4 +1,22 @@
 
+<?php 
+
+    require_once "./class-php/user.class.php";
+    $user = new User("museu", "localhost", "root", "");
+
+    if (isset($_GET['id']) && !empty($_GET['id']))
+    {
+        $id = addslashes($_GET['id']);
+    }else{
+        header('location: visualizar_obras.php');
+    }
+
+    $dadosObra = $user->buscarObraPorId($id);
+    $imagemObra = $user->buscarImagemObraPorId($id);
+    var_dump($imagemObra);
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -36,12 +54,12 @@
                 
                  <br><br><br><br><br><br>
                 <div class="card">
-                    <img class="card-img" src="./img/van-gogh.jpg" alt="Card image">
+                    <img class="card-img" src="./img-obras/<?php echo $imagemObra['nome_imagem']; ?>" alt="Card image">
                 </div>
                 <div class="card p-3 text-center">
                     <blockquote class="blockquote mb-0">
-                        <h1>Van Gogh X</h1> 
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <h1><?php echo $dadosObra['nome_obra']; ?></h1> 
+                      <p><?php echo $dadosObra['descricao']; ?></p>
                       <footer class="blockquote-footer">
                         <small class="text-muted">
                           Por <cite title="Source Title">Jorzias Veras</cite>
