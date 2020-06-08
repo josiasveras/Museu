@@ -33,7 +33,7 @@
                     <ul>
                         <li><a href="index.php">Home</a></li>
                         <li><a href="visualizar_obras.php">Exposições</a></li>
-                        <li><a href="criar_obra.php" target="_blank">Criar obra</a></li>
+                        <li><a href="criar_obra.php">Criar obra</a></li>
                     </ul>
                     
                     
