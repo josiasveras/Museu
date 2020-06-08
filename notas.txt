@@ -1,3 +1,4 @@
+style="background-color: #f4f2ec; height: 600px; width: 600px; "
 
 TO DO:
 	1-login
@@ -8,6 +9,13 @@ TO DO:
 	6-apresentação das obras (slide)
 	7-Conflitos Bootstrap/CSS
 	8-Banco: deletar linhas `dt_nasc` e `genero`'
+	9-Indentificar autor na tela obra perfil
+	10-Espaço do form salvar imagem no Modal
+	11-Menu rodapé
+
+  HEADER
+    position: relative;
+    top: 37px;
 
 MATERIAL USADO FONTES:
 	
