@@ -49,10 +49,9 @@
                         session_start();  
                         
                         if(!isset($_SESSION['id_usuario'])){
-
-                            
+                                                   
                     ?>
-                            <div class="dropdown">
+                                <div class="dropdown">
                                     <button class="dropbtn">Não Logado</button>
                                     <div class="dropdown-content">
                                         <a href="login.php">Login</a>
