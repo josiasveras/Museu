@@ -66,3 +66,41 @@ body{
 	transform: translate(-50%, -50%);
 	background-color: white;	
 }
+
+
+/* Barra de navegação
+---------------------------------------------------------------- */
+header {
+	top: 20px;
+	background-color: white;
+    position: absolute;
+    right: 600px;
+	height: 30px;
+}
+
+nav{
+	position: relative;
+	bottom: 15px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 20px;
+    float: right;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a:link {
+    display: block;
+    margin-right: 25px;
+    padding-bottom: 3px;
+    text-transform: uppercase;
+    text-decoration:none;
+}
+
+nav ul li a:hover {
+    border-bottom:1px solid #535858;
+}
