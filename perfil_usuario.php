@@ -21,6 +21,38 @@
     </head>
 
     <body>
+
+                    <!-- Início botão logado/não logado -->
+                    <?php
+
+                        session_start();  
+                        
+                        if(!isset($_SESSION['id_usuario'])){
+                                                   
+                    ?>
+                                <div class="dropdown">
+                                    <button class="dropbtn">Não Logado</button>
+                                    <div class="dropdown-content">
+                                        <a href="login.php">Login</a>
+                                        <a href="cadastro_usuario.php">Inscrever-se</a>
+                                    </div>
+                                </div>
+                    <?php
+                        }else{
+
+                            /*session_start();*/
+
+                            echo'<div class="dropdown">
+                                    <button class="dropbtn">Logado</button>
+                                    <div class="dropdown-content">
+                                        <a href="perfil_usuario.php">Perfil</a>
+                                        <a href="logout.php">Sair</a>
+                                    </div>
+                                </div>';
+
+                        } 
+                    ?>
+                    <!-- Fim botão logado/não logado -->
         
         <?php 
 
@@ -37,6 +69,7 @@
                 if (!empty($nome) && !empty($email) && !empty($idade)) {
                       
                     $user->updateUser($id, $nome, $email, $idade);
+                    header("Refresh:0");
 
                 }else{
 
@@ -62,7 +95,7 @@
                     <ul>
                         <li><a href="./index.php">Home</a></li>
                         <li><a href="./visualizar_obras.php">Exposições</a></li>
-                        <li><a href="./criar_obra.php" target="_blank">Criar obra</a></li>
+                        <li><a href="./criar_obra.php">Criar obra</a></li>
                     </ul>
                 </nav>
                 <!-- Fim nav -->
@@ -73,42 +106,30 @@
             <!-- Início principal -->
             <div id="principal">
 
-                <!-- Início form-wrapper -->
-                <div class="form-wrapper">
+                <br><br><br><br>
+                <!-- Início containerForm -->
+                <div class="containerForm">
       
-                    <br><br><br><br><br><br>
                     <h2 style="text-align:center;">Perfil público</h2>
                     <h3 style="text-align:center;">Informações sobre você</h3>
 
-                    <?php 
-
-                        /*$data = $user->selectUser();
-
-                        if (count($data) > 0) {
-                                foreach ($data as $key => $value) {
-                                    
-                                }
-                        }*/
-                    ?>
-
                     <form method="POST">
-                      <div class="form-group">
+
                         <label for="nome">Nome</label>
-                        <input type="text" class="form-control" id="nome" name="nome" value="<?php echo $dadosUsuario['nome_usuario']; ?>">
-                      </div>
-                      <div class="form-group">
+                        <input type="text" id="nome" name="nome" value="<?php echo $dadosUsuario['nome_usuario']; ?>">
+                      
                         <label for="email">Endereço de email</label>
-                        <input type="email" class="form-control" id="email" name="email" value="<?php echo $dadosUsuario['email']; ?>">
-                      </div>
-                      <div class="form-group">
+                        <input type="email" id="email" name="email" value="<?php echo $dadosUsuario['email']; ?>">
+                      
+                      
                         <label for="dtNasc">Idade</label>
-                        <input type="number" maxlength="3" class="form-control" id="idade" name="idade" value="<?php echo $dadosUsuario['idade']; ?>">
-                      </div> 
-                      <button type="submit" class="btn btn-primary">Salvar</button>
+                        <input type="number" maxlength="3" id="idade" name="idade" value="<?php echo $dadosUsuario['idade']; ?>">
+                       
+                        <input type="submit" value="Salvar">
                     </form>
                     
                 </div>
-                <!-- Fim form-wrapper -->
+                <!-- Fim containerForm -->
 
                 <footer>
                     <p>
