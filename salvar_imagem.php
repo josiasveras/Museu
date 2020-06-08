@@ -15,7 +15,7 @@
 	</head>
 	<body>
 
-		<div class="jumbotron">
+		<div class="jumbotron" style="background-color: #f4f2ec; height: 600px; width: 600px; ">
 
 			<form method="POST" enctype="multipart/form-data">
 			 	<div class="form-group">
