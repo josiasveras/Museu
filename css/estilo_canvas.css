@@ -71,7 +71,7 @@ body{
 /* Barra de navegação
 ---------------------------------------------------------------- */
 header {
-	top: 20px;
+	top: 3px;
 	background-color: white;
     position: absolute;
     right: 600px;
