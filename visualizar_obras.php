@@ -16,11 +16,43 @@
 
     <body>
 
+                    <!-- Início botão logado/não logado -->
+                    <?php
+
+                        session_start();  
+                        
+                        if(!isset($_SESSION['id_usuario'])){
+                                                   
+                    ?>
+                                <div class="dropdown">
+                                    <button class="dropbtn">Não Logado</button>
+                                    <div class="dropdown-content">
+                                        <a href="login.php">Login</a>
+                                        <a href="cadastro_usuario.php">Inscrever-se</a>
+                                    </div>
+                                </div>
+                    <?php
+                        }else{
+
+                            /*session_start();*/
+
+                            echo'<div class="dropdown">
+                                    <button class="dropbtn">Logado</button>
+                                    <div class="dropdown-content">
+                                        <a href="perfil_usuario.php">Perfil</a>
+                                        <a href="logout.php">Sair</a>
+                                    </div>
+                                </div>';
+
+                        } 
+                    ?>
+                    <!-- Fim botão logado/não logado -->
+
 <!-- Início modal -->
         <!-- Trigger/Open The Modal 
 <button id="myBtn">Open Modal</button>-->
-<div class="dropdown">
-    <button id="myBtn" class="dropbtn">Expor obra</button>
+<div class="btnExpObraCont">
+    <button id="myBtn" class="btnExpObra">Expor obra</button>
             <!-- <div class="dropdown-content">
                 <a href="salvar_imagem.php">Expor obra</a>
                 <a href="cadastro_usuario.php">Nova obra</a>
@@ -35,21 +67,23 @@
 
             <span class="close">&times;</span>
 
-            <form method="POST" enctype="multipart/form-data" style="height: 100%">
-                <div class="form-group">
-                    <label for="nomeObra">Nome da obra</label>
-                    <input type="text" class="form-control" id="nome-obra" name="nomeObra">
-                </div>
-                <div class="form-group">
-                    <label for="descricao">Descrição da obra</label>
-                    <textarea class="form-control" id="descricao" name="descricao" rows="3"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="btnImg">Selecione a imagem</label>
-                    <input type="file" class="form-control-file" id="foto-obra" name="fotoObra[]">
-                </div>
-                <button type="submit" class="btn btn-primary">Salvar</button>
-            </form>
+        <div class="containerForm">
+          <form method="POST" enctype="multipart/form-data">
+
+            <label for="nomeObra">Nome da obra</label>
+            <input type="text" id="nome-obra" name="nomeObra">
+
+            <label for="descricao">Descrição da obra</label>
+            <textarea id="descricao" name="descricao" style="height:200px"></textarea>
+
+            <label for="btnImg">Selecione a imagem</label>
+            <input type="file" id="foto-obra" name="fotoObra[]">
+
+            <input type="submit" value="Salvar">
+
+          </form>
+        </div>
+
 
         <?php
 
@@ -127,7 +161,7 @@ window.onclick = function(event) {
         <div id="container">
 
             <!-- Início header -->
-            <header>
+            <header class="headerPos">
                 <div id="logo">
                     <h1><a href="">MuSenac</a></h1>
                 </div>
