@@ -60,7 +60,7 @@
                     <ul>
                         <li><a href="./index.php">Home</a></li>
                         <li><a href="./visualizar_obras.php">Exposições</a></li>
-                        <li><a href="./criar_obra.php" target="_blank">Criar obra</a></li>
+                        <li><a href="./criar_obra.php">Criar obra</a></li>
                     </ul>
                 </nav>
                 <!-- Fim nav -->
@@ -97,59 +97,60 @@
                 </div> -->
                 <!-- Fim form-wrapper -->
 
-        <!-- Início containerForm -->
-        <div class="containerForm">
-          <h2 style="text-align:center;">Criação de perfil público</h2>  
-          <form method="POST">
+                <!-- Início containerForm -->
+                <div class="containerForm">
+                  <h2 style="text-align:center;">Criação de perfil público</h2>  
+                  <form method="POST">
 
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome">
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Ex: caracter@caracter.dominio">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Ex: caracter@caracter.dominio">
 
-            <label for="senha">Senha</label>
-            <input type="password" id="senha" name="senha" placeholder="6 caracteres">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="6 caracteres">
 
-            <label for="idade">Idade</label>
-            <input type="number" maxlength="3" id="idade" name="idade">
+                    <label for="idade">Idade</label>
+                    <input type="number" maxlength="3" id="idade" name="idade">
 
-            <input type="submit" value="Enviar">
+                    <input type="submit" value="Enviar">
 
-          </form>
-        </div>
-        <!-- Fim containerForm -->
+                  </form>
+                </div>
+                <!-- Fim containerForm -->
 
-        <?php 
+                <?php 
 
-            if (isset($_POST['nome'])) {
-                //Recebendo o que o usuário digita nos inputs
-                $nome = addslashes($_POST['nome']);
-                $email = addslashes($_POST['email']);
-                $senha = addslashes($_POST['senha']);
-                $idade = addslashes($_POST['idade']);
+                    if (isset($_POST['nome'])) {
+                        //Recebendo o que o usuário digita nos inputs
+                        $nome = addslashes($_POST['nome']);
+                        $email = addslashes($_POST['email']);
+                        $senha = addslashes($_POST['senha']);
+                        $idade = addslashes($_POST['idade']);
 
-                //Verificando se os campos não estão vazios
-                if (!empty($nome) && !empty($email) && !empty($senha) && !empty($idade)) {
-                    
-                        //Verificando se o usuário já está cadastrado
-                        if (!$user->createUser($nome, $email, $senha, $idade)){
-                            echo '<div class="alert alert-danger" role="alert"> Email já cadastrado! </div>'; 
-                        
-                        //Cadastrar
+                        //Verificando se os campos não estão vazios
+                        if (!empty($nome) && !empty($email) && !empty($senha) && !empty($idade)) {
+                            
+                                //Verificando se o usuário já está cadastrado
+                                if (!$user->createUser($nome, $email, $senha, $idade)){
+                                    echo '<div class="alert alert-danger" role="alert"> Email já cadastrado! </div>'; 
+                                
+                                //Cadastrar
+                                }else{
+                                    $user->createUser($nome, $email, $senha, $idade);
+                                    //header("location: login.php");
+                                }
+
                         }else{
-                            $user->createUser($nome, $email, $senha, $idade);
+
+                            echo '<div class="alert alert-danger"" role="alert"> Preencha todos os campos! </div>';
+
                         }
 
-                }else{
+                    }
 
-                    echo '<div class="alert alert-danger"" role="alert"> Preencha todos os campos! </div>';
-
-                }
-
-            }
-
-        ?>
+                ?>
 
                 <footer>
                     <p>
