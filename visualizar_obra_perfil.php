@@ -27,11 +27,43 @@
 
     <body>
 
+                    <!-- Início botão logado/não logado -->
+                    <?php
+
+                        session_start();  
+                        
+                        if(!isset($_SESSION['id_usuario'])){
+                                                   
+                    ?>
+                                <div class="dropdown">
+                                    <button class="dropbtn">Não Logado</button>
+                                    <div class="dropdown-content">
+                                        <a href="login.php">Login</a>
+                                        <a href="cadastro_usuario.php">Inscrever-se</a>
+                                    </div>
+                                </div>
+                    <?php
+                        }else{
+
+                            /*session_start();*/
+
+                            echo'<div class="dropdown">
+                                    <button class="dropbtn">Logado</button>
+                                    <div class="dropdown-content">
+                                        <a href="perfil_usuario.php">Perfil</a>
+                                        <a href="logout.php">Sair</a>
+                                    </div>
+                                </div>';
+
+                        } 
+                    ?>
+                    <!-- Fim botão logado/não logado -->
+
         <!-- Início container -->
         <div id="container">
 
             <!-- Início header -->
-            <header>
+            <header class="headerPos">
                 <div id="logo">
                     <h1><a href="">MuSenac</a></h1>
                 </div>
