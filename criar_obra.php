@@ -24,6 +24,19 @@
 
     </head>
     <body>
+        
+                <!-- Início nav -->
+                
+                    <header>
+                        <nav>
+                            <ul>
+                                <li><a href="./index.php">Home</a></li>
+                                <li><a href="./visualizar_obras.php">Exposições</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                
+                <!-- Fim nav -->
        
         <!-- Início toolbox left -->
         <div class="toolbox left">
