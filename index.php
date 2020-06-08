@@ -11,13 +11,6 @@
 
     <body>
 
-        <?php 
-        session_start();
-        echo "<prev>";
-        print_r($_SESSION['id_usuario']);
-        echo "</prev>";
-        ?>
-
         <!-- Início container -->
         <div id="container">
 
