@@ -44,20 +44,17 @@
                                     </div>
                                 </div>';
 
+                                echo '<!-- Trigger/Open The Modal 
+                                        <button id="myBtn">Open Modal</button>-->
+                                        <div class="btnExpObraCont">
+                                        <button id="myBtn" class="btnExpObra">Expor obra</button>
+                                     </div>';
+
                         } 
                     ?>
                     <!-- Fim botão logado/não logado -->
 
 <!-- Início modal -->
-        <!-- Trigger/Open The Modal 
-<button id="myBtn">Open Modal</button>-->
-<div class="btnExpObraCont">
-    <button id="myBtn" class="btnExpObra">Expor obra</button>
-            <!-- <div class="dropdown-content">
-                <a href="salvar_imagem.php">Expor obra</a>
-                <a href="cadastro_usuario.php">Nova obra</a>
-            </div> -->
-</div>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -171,7 +168,7 @@ window.onclick = function(event) {
                     <ul>
                         <li><a href="./index.php">Home</a></li>
                         <li><a href="./visualizar_obras.php">Exposições</a></li>
-                        <li><a href="./criar_obra.php" target="_blank">Criar obra</a></li>
+                        <li><a href="./criar_obra.php">Criar obra</a></li>
                     </ul>
                 </nav>
                 <!-- Fim nav -->
