@@ -63,7 +63,7 @@
         <div id="container">
 
             <!-- Início header -->
-            <header class="headerPos">
+            <header>
                 <div id="logo">
                     <h1><a href="">MuSenac</a></h1>
                 </div>
@@ -86,19 +86,18 @@
                 
                  <br><br><br><br><br><br>
                 <div class="card">
-                    <img class="card-img" src="./img-obras/<?php echo $imagemObra['nome_imagem']; ?>" alt="Card image">
+                    <img src="./img-obras/<?php echo $imagemObra['nome_imagem']; ?>" alt="Card image" style="width:100%">
+                    <div class="container">
+                        <h4><?php echo $dadosObra['nome_obra']; ?></h4> 
+                        <p><?php echo $dadosObra['descricao']; ?></p>
+                        <footer>
+                            <small>
+                                Por <cite title="Source Title">Autor</cite>
+                            </small>
+                        </footer>
+                    </div>
                 </div>
-                <div class="card p-3 text-center">
-                    <blockquote class="blockquote mb-0">
-                        <h1><?php echo $dadosObra['nome_obra']; ?></h1> 
-                      <p><?php echo $dadosObra['descricao']; ?></p>
-                      <footer class="blockquote-footer">
-                        <small class="text-muted">
-                          Por <cite title="Source Title">Jorzias Veras</cite>
-                        </small>
-                      </footer>
-                    </blockquote>
-                </div>
+                
                 <br><br><br><br><br><br>
 
                 <footer>
