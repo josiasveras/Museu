@@ -13,15 +13,11 @@
 		<meta charset="utf-8">
 		<title>Login</title>
 
-		<!-- Estilo customizado -->
-		<link rel="stylesheet" href="css/estilo_login.css">
-		
-		<!-- Bootstrap -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<?php require "./head.php"; ?>
 
 	</head>
 
-	<body>
+	<body id="corpoLogin">
 
 		<div id="corpo-form">
 			<h1>Entrar</h1>
@@ -29,7 +25,7 @@
 				<input type="email" name="email" placeholder="Usuário">
 				<input type="password" name="senha" placeholder="Senha">
 				<input type="submit" name="acessar" value="ACESSAR">
-				<a href="cadastro_usuario.php">Ainda não é inscrito?<strong>Cadastre-se!</strong></a>
+				<a id="aLogin" href="cadastro_usuario.php">Ainda não é inscrito?<strong>Cadastre-se!</strong></a>
 			</form>
 		</div>
 
