@@ -50,7 +50,7 @@
         <div id="container">
 
             <!-- Início header -->
-            <header class="headerPos">
+            <header>
                 <div id="logo">
                     <h1><a href="">MuSenac</a></h1>
                 </div>
