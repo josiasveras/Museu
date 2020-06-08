@@ -10,12 +10,15 @@
 	<head>
 		<title>Museu Senac</title>
 
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
+		<!-- Estilo customizado -->
+		<link rel="stylesheet" href="css/estilo.css">
+
+		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">  -->
 
 	</head>
 	<body>
 
-		<div class="jumbotron" style="background-color: #f4f2ec; height: 600px; width: 600px; ">
+		<!-- <div class="jumbotron" style="background-color: #f4f2ec; height: 600px; width: 600px; ">
 
 			<form method="POST" enctype="multipart/form-data">
 			 	<div class="form-group">
@@ -33,6 +36,23 @@
 			  	<button type="submit" class="btn btn-primary">Salvar</button>
 			</form>
 			
+		</div> -->
+
+		<div class="containerForm">
+		  <form method="POST" enctype="multipart/form-data">
+
+		    <label for="nomeObra">Nome da obra</label>
+		    <input type="text" id="nome-obra" name="nomeObra">
+
+		    <label for="descricao">Descrição da obra</label>
+		    <textarea id="descricao" name="descricao" style="height:200px"></textarea>
+
+		    <label for="btnImg">Selecione a imagem</label>
+			<input type="file" id="foto-obra" name="fotoObra[]">
+
+		    <input type="submit" value="Salvar">
+
+		  </form>
 		</div>
 
 		<?php
