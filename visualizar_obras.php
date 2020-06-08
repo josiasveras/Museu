@@ -158,7 +158,7 @@ window.onclick = function(event) {
         <div id="container">
 
             <!-- Início header -->
-            <header class="headerPos">
+            <header>
                 <div id="logo">
                     <h1><a href="">MuSenac</a></h1>
                 </div>
@@ -196,11 +196,13 @@ window.onclick = function(event) {
                         }else
                         {
 
+                            echo '<div class="grid-container">';
+
                           foreach ($dadosObra as $value) 
                           {
                       ?>
-                            <div class="col-md-4">
-                              <div class="thumbnail">
+                            
+                              <div class="grid-item">
                                 <a href="visualizar_obra_perfil.php?id=<?php echo $value['id_obra']; ?>">
                                   <img src="./img-obras/<?php echo $value['foto_obra']; ?>" style="width:100%">
                                   <div class="caption">
@@ -208,9 +210,11 @@ window.onclick = function(event) {
                                   </div>
                                 </a>
                               </div>
-                            </div>
                       <?php
-                          }                        
+                          }  
+
+                          echo '</div>';
+
                         }
                       ?>
                     </div>
