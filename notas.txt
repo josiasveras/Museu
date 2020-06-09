@@ -1,17 +1,19 @@
 style="background-color: #f4f2ec; height: 600px; width: 600px; "
 
 TO DO:
-	1-login
-	2-salvar obra no banco
-	3-exibir obras
-	4-gerar SVG pra salvar no banco - GETsvg - //jsfiddle.net/pfp9y5xp
-	5-obra não pode ser editada novamente
+	1-login - OK
+	2-salvar obra no banco - OK
+	3-exibir obras - OK
+	4-gerar SVG pra salvar no banco - GETsvg - //jsfiddle.net/pfp9y5xp - FEITO DE OUTRA FORMA
+	5-obra não pode ser editada novamente - OK
 	6-apresentação das obras (slide)
-	7-Conflitos Bootstrap/CSS
-	8-Banco: deletar linhas `dt_nasc` e `genero`'
+	7-Conflitos Bootstrap/CSS - OK
+	8-Banco: deletar linhas `dt_nasc` e `genero`' - OK
 	9-Indentificar autor na tela obra perfil
-	10-Espaço do form salvar imagem no Modal
+	10-Espaço do form salvar imagem no Modal - OK
 	11-Menu rodapé
+  12-Colocar no forum o link para o acesso à página online, o link para o repositório, e um manual para deploy.
+  13-https://museu-senac.herokuapp.com/
 
   HEADER
     position: relative;
