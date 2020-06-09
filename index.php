@@ -82,7 +82,7 @@
                         <article id="video">
 
                             <h3>Vídeo: conheça o museu</h3>
-                            <iframe width="310" height="170" src="https://www.youtube.com/embed/RGUYb-hivrc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="310" height="170" src="https://www.youtube.com/embed/fyMpCrowAA8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                         </article>
 
