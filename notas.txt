@@ -13,8 +13,10 @@ TO DO:
 	10-Espaço do form salvar imagem no Modal - OK
 	11-Menu rodapé
   12-Colocar no forum o link para o acesso à página online, o link para o repositório, e um manual para deploy.
-  13-https://museu-senac.herokuapp.com/
-  14-Prepara o manual para rodar localmente também e colocar no gihub e no forum (m!h3r0ku)
+  13-https://museu-senac.herokuapp.com/ (m!h3r0ku)
+  14-Prepara o manual para rodar localmente também e colocar no gihub e no forum 
+  15-http://museu-senac.epizy.com/ (1nf1n1tyfr33)(epiz_25978333)
+  16-https://museu-senac.000webhostapp.com/(VDLqUd5GK!Q1aV(h7EoM)(pass-7q|>_$%QPiIZPeh0-user-root) - 000w3bh05t
 
   HEADER
     position: relative;
