@@ -1,9 +1,11 @@
 
 MUSEU SENAC:
+ 
  Criação de um site de museu como projeto final da matéria Aplicações Ricas para Internet
 
 
 INSTALANDO LOCALMENTE:
+
 1 - Requer Xampp e MySQL instalados no computador.
 
 2 - Faça o download do projeto e armazene na pasta C:\xampp\htdocs conforme seu sistema operacional.
