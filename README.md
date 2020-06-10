@@ -3,20 +3,25 @@ MUSEU SENAC:
  Criação de um site de museu como projeto final da matéria Aplicações Ricas para Internet
 
 
+INSTALANDO LOCALMENTE:
+1 - Requer Xampp e MySQL instalados no computador.
+
+2 - Faça o download do projeto e armazene na pasta C:\xampp\htdocs conforme seu sistema operacional.
+
+3 - Abra o painel de controle do Xampp inicie o SQL e o Apache e no PHPMyAdmin crie o banco com o arquivo BD_Museu.sql que está na pasta sql no diretório do projeto.
+
+4 - Acesse: localhost/nome_da_pasta_raiz/index.php
+
+
+VÍDEO DE DEMONSTRAÇÃO PARA UTILIZAÇÃO DA APLICAÇÃO:
+https://www.youtube.com/watch?v=HVBzseLtSaw
+
+URL DA APLICAÇÃO:
+https://museu-senac.000webhostapp.com/index.php
 
 
 
-
-
-
-
-
-
-
-
-
-
-NOTAS SOBRE TODO O PROJETO:
+OUTRAS NOTAS SOBRE O PROJETO:
 
 	INSPIRAÇÃO:
 		-https://file.org.br/
@@ -33,8 +38,6 @@ NOTAS SOBRE TODO O PROJETO:
 		-ES6
 		-HTML5
 		-CSS3
-		-BootStrap
-		-Node JS
 
 	------------------------------------------------------------------------------------------------------------------------
 
@@ -64,3 +67,5 @@ NOTAS SOBRE TODO O PROJETO:
 		https://www.php.net/manual/pt_BR/book.pdo.php
 
 
+Por
+Jorzias de Souza Veras
